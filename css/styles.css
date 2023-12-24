@@ -322,35 +322,36 @@ article {
     }
 
     & form {
-        position: relative;
         width: min(20rem, 100%);
         margin-inline: auto;
+        border-radius: 100vmax;
+        padding: 0.3em;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        position: relative;
 
-        &:is(:hover, :focus-within) input{
+        &:is(:hover, :focus-within) {
             outline-color: transparent;
             outline: 3px solid hsl(var(--clr-accent));
         }
 
-        & input,
-        & button {
-            position: absolute;
-        }
-
         & input {
-            width: 100%;
-            left: 0;
+            border-radius: 100vmax 0 0 100vmax;
             border: 0;
-            border-radius: 100vmax;
-            padding: 0.5em 1.25em;
+            padding: 0.3em 1.25em;
+            width: 65%;
+
+            &:is(:hover, :focus-within) {
+                outline-color: transparent;
+            }
         }
 
         & button {
-            right: 0.25em;
-            top: 0.25em;
-            bottom: 0.25em;
             border-radius: 100vmax;
             padding: 0.3em 1.25em;
-            height: max-content;
+            position: absolute;
+            right: 0.3em;
 
             &:is(:hover, :focus-within) {
                 background-color: hsl(var(--clr-accent) / 0.8);
